@@ -49,12 +49,12 @@
 }
 .about-body {
   font-family: Arial;
-  background: #f2f2f2;
+  background: #f4f2f2;
   margin: 0;
 }
 .about-header,
 .about-footer {
-  background: #d3d1d1;
+ background: #636262;
   text-align: center;
   padding: 20px;
 }
@@ -158,7 +158,7 @@ textarea {
 }
 .learned-body {
   font-family: Arial;
-  background: #f2f2f2;
+  background: #f5f3f3;
   margin: 0;
 }
 .learned-header,
