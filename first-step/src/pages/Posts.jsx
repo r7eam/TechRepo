@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
-import Header from './Header.jsx';
-import Footer from './Footer.jsx';
-import Post from './Post.jsx';
+import Header from '../components/Header.jsx';
+import Footer from '../components/Footer.jsx';
+import Post from '../components/Post.jsx';
 
 function Posts() {
   const [posts, setPosts] = useState([]);
