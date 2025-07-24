@@ -1,16 +1,82 @@
 
-/* =================== Home Page (first-task.html) =================== */
-.home-body {
-  font-family: Arial;
-  background: #f2f2f2;
-  margin: 0;
-}
-.home-header,
-.home-footer {
+/* =================== Header and Footer Components =================== */
+.header {
   background: #727272;
   text-align: center;
   padding: 20px;
   margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .logo {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.header nav button {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  text-align: center;
+}
+
+.header nav button:last-child {
+  margin-right: 0;
+}
+
+.header nav button:hover {
+  background: #0078d7;
+  color: #fff;
+}
+
+.footer {
+  background: #727272;
+  text-align: center;
+  padding: 20px;
+  margin: 0px;
+}
+
+.footer nav button {
+  margin-right: 16px;
+  padding: 10px 20px;
+  margin: 0 5px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer nav button:hover {
+  background: #0078d7;
+  color: #fff;
+}
+
+.footer p {
+  margin: 10px 0 0 0;
+  color: #fff;
+}
+
+/* =================== Home Page =================== */
+.home-body {
+  font-family: Arial;
+  background: #f2f2f2;
+  margin: 0;
 }
 .hero-section,
 
@@ -47,7 +113,7 @@ nav button:last-child {
   margin-right: 0;
 }
 
-/* =================== About Page (about.html) =================== */
+/* =================== About Page =================== */
 .about-body .content {
   padding: 20px;
   min-height: 40vh;
@@ -62,18 +128,17 @@ nav button:last-child {
   background: #f4f2f2;
   margin: 0;
 }
-.about-header,
-.about-footer {
- background: #636262;
-  text-align: center;
-  padding: 20px;
-}
 .content {
   padding: 40px;
   text-align: center;
 }
 
-/* =================== Services Page (services.html) =================== */
+/* =================== Services Page =================== */
+.services-body {
+  font-family: Arial;
+  background: #e5e5e5;
+  margin: 0;
+}
 .services-body .services {
   text-align: center;
   padding: 40px 20px;
@@ -82,17 +147,6 @@ nav button:last-child {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.services-body {
-  font-family: Arial;
-  background: #e5e5e5;
-  margin: 0;
-}
-.services-header,
-.services-footer {
-  background: #8a8888;
-  text-align: center;
-  padding: 20px;
 }
 .services {
   text-align: center;
@@ -112,7 +166,12 @@ nav button:last-child {
   transform: translateY(-2px) scale(1.02);
 }
 
-/* =================== Contact Page (contact.html) =================== */
+/* =================== Contact Page =================== */
+.contact-body {
+  font-family: Arial;
+  margin: 0;
+  background-color: #f4f4f4;
+}
 .contact-body .contact {
   padding: 20px;
   min-height: 40vh;
@@ -120,17 +179,6 @@ nav button:last-child {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-}
-.contact-body {
-  font-family: Arial;
-  margin: 0;
-  background-color: #f4f4f4;
-}
-.contact-header,
-.contact-footer {
-  background: #8e8c8c;
-  padding: 20px;
   text-align: center;
 }
 .contact {
@@ -152,7 +200,12 @@ textarea {
   padding: 10px;
 }
 
-/* =================== What I Learned Page (learned.html) =================== */
+/* =================== What I Learned Page =================== */
+.learned-body {
+  font-family: Arial;
+  background: #f5f3f3;
+  margin: 0;
+}
 .learned-body .week-section {
   background: #949292;
   margin: 20px auto;
@@ -166,17 +219,93 @@ textarea {
   align-items: center;
   justify-content: center;
 }
-.learned-body {
-  font-family: Arial;
-  background: #f5f3f3;
+
+/* =================== Posts Page =================== */
+.posts-body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  background: #c2c1c1;
+  color: #000000;
   margin: 0;
+  min-height: 100vh;
 }
-.learned-header,
-.learned-footer {
-  background: #6b6a6a;
-  text-align: center;
+
+.board {
+  max-width: 800px;
+  margin: 40px auto;
   padding: 20px;
 }
+
+.posts-body h1 {
+  text-align: center;
+  color: #000000;
+  font-weight: 600;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.posts-container {
+  margin-top: 20px;
+}
+
+.post {
+  background-color: #76747483;
+  border: 2px solid #686868;
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 25px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.post:hover {
+  background-color: #bebcbc;
+  border-color: #00080a;
+}
+
+.post h3 {
+  margin-top: 0;
+  color: #1e11a5;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.pagination button {
+  background-color: #333;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  padding: 10px 20px;
+  margin: 0 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.pagination button:hover {
+  background-color: #61dafb;
+  color: #121212;
+}
+
+.pagination button:disabled {
+  background-color: #222;
+  color: #555;
+  border-color: #333;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #888;
+  margin: 0 15px;
+  vertical-align: middle;
+}
+
 /* Center elements */
 .week-section,
 .service-card {

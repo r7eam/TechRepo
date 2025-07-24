@@ -1,20 +1,14 @@
-import { Link } from 'react-router-dom'; 
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
 
-function Learned() { 
+function Learned() {
   return (
     <div className="learned-body">
-      <header className="learned-header">
-        <img src="/tech hub logo-01.png" alt="Tech Hub logo" width="180" height="180" /> {/* Self-closing tag */}
-        <nav>
-          <Link to="/"><button>Home</button></Link>
-          <Link to="/services"><button>Services</button></Link>
-          <Link to="/contact"><button>Contact</button></Link>
-          <Link to="/learned"><button>What I Learned</button></Link>
-        </nav>
-      </header>
+      <Header />
 
       <div className="content">
         <h2>What I Learned - Tech Hub</h2>
+
         <div className="week-section">
           <h3>Week 1 and 2</h3>
           <ul>
@@ -23,22 +17,31 @@ function Learned() {
             <li><b>GitHub:</b> repo creation, pushing via GitHub Desktop</li>
             <li><b>Vite & SWC:</b> fast build tools & transpiler basics</li>
             <li><b>Web:</b> GET vs POST, HTML tags, internal CSS centering</li>
+            <li><b>React:</b> some hooks useState and useEffect and useContext</li>
           </ul>
         </div>
+
         <div className="week-section">
           <h3>Week 3</h3>
           <ul>
-            <li><b>React:</b> some hooks useState and useEffect and useContext</li>
+            <li>How to use async/await to handle asynchronous API calls.</li>
+            <li>How to use .then() to handle promises in Axios.</li>
+            <li>How JSON.parse() works and how data comes from the backend.</li>
+            <li>How to style React components using inline styles.</li>
+            <li>How to style components using external CSS files.</li>
+            <li>How to use class names to apply styles in React.</li>
+            <li>Introduction to Material UI (MUI) for building UI components.</li>
+            <li><b>React:</b> how to use props and state effectively</li>
+            <li><b>React:</b> how to manage component lifecycle with useEffect</li>
+            <li><b>React:</b> how to create custom hooks for reusable logic</li>
+            <li><b>React Router:</b> how to implement navigation in a React app</li>
+            <li><b>Axios:</b> how to make API calls and handle responses</li>
+            <li><b>Testing:</b> how to write unit tests for React components</li>
           </ul>
         </div>
       </div>
 
-      <footer className="learned-footer">
-        <nav>
-          <Link to="/about"><button>About</button></Link>
-        </nav>
-        <p>© 2025 Tech Hub</p>
-      </footer>
+      <Footer />
     </div>
   );
 }
