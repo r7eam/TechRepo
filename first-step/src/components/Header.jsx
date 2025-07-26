@@ -12,6 +12,7 @@ function Header() {
         <Link to="/contact"><button>Contact</button></Link>
         <Link to="/learned"><button>What I Learned</button></Link>
         <Link to="/posts"><button>Posts</button></Link>
+        <Link to="/Clock"><button>Clock</button></Link>
       </nav>
     </header>
   );

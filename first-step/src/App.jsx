@@ -6,6 +6,7 @@ import Services from './components/Services.jsx';
 import Contact from './components/Contact.jsx';
 import Learned from './components/Learned.jsx';
 import Posts from './pages/Posts.jsx';
+import Clock from './components/ForTest.jsx'; 
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/learned" element={<Learned />} />
         <Route path="/posts" element={<Posts />} />
+        <Route path="/Clock" element={<Clock />} />
       </Routes>
     </BrowserRouter>
   );
