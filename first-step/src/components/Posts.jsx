@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Grid } from '@mui/material'; 
+import { Grid, Card, CardContent, Typography, Pagination, Box } from '@mui/material';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 
@@ -26,46 +26,43 @@ function Posts() {
   const LastPost = currentPage * postsPerPage;
   const FirstPost = LastPost - postsPerPage;
   const currentPosts = posts.slice(FirstPost, LastPost);
+  const totalPages = Math.ceil(posts.length / postsPerPage);
 
   return (
-    <div className="posts-body">
+    <Box className="posts-body" sx={{ minHeight: '100vh', bgcolor: '#cdc3c3ff' }}>
       <Header />
-      
-      <div className="board">
-        <h1>My Fake Json Posts</h1>
-
-        {/* --- 2. MAKE CHANGES HERE --- */}
+      <Box className="board" sx={{ maxWidth: 800, mx: 'auto', my: 4, p: 2 }}>
+        <Typography variant="h4" align="center" color="#1976d2" fontWeight={700} gutterBottom>
+          My Fake Json Posts
+        </Typography>
         <Grid container spacing={3}>
           {currentPosts.map(post => (
-            <Grid item key={post.id} xs={12}>
-              <div className="post">
-                <h3>{post.title}</h3>
-                <p>{post.body}</p>
-              </div>
+            <Grid item key={post.id} xs={12} sm={6} md={4}>
+              <Card sx={{ bgcolor: '#222', color: '#fafafa', borderRadius: 2, boxShadow: 2 }}>
+                <CardContent>
+                  <Typography variant="h6" color="#1976d2" gutterBottom>
+                    {post.title}
+                  </Typography>
+                  <Typography variant="body2" color="#fafafa">
+                    {post.body}
+                  </Typography>
+                </CardContent>
+              </Card>
             </Grid>
           ))}
         </Grid>
-        {/* --- END OF CHANGES --- */}
-        
-        <div className="pagination">
-          <button
-            onClick={() => setCurrentPage(currentPage - 1)}
-            disabled={currentPage === 1}
-          >
-            Previous
-          </button>
-          <span> Page {currentPage} </span>
-          <button
-            onClick={() => setCurrentPage(currentPage + 1)}
-            disabled={LastPost >= posts.length}
-          >
-            Next
-          </button>
-        </div>
-      </div>
-
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
+          <Pagination
+            count={totalPages}
+            page={currentPage}
+            onChange={(e, page) => setCurrentPage(page)}
+            color="standard"
+            shape="rounded"
+          />
+        </Box>
+      </Box>
       <Footer />
-    </div>
+    </Box>
   );
 }
 
