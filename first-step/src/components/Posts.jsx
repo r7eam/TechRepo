@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import Header from '../components/Header.jsx';
-import Footer from '../components/Footer.jsx';
-import Post from '../components/Post.jsx';
+import { Grid } from '@mui/material'; 
+import Header from './Header.jsx';
+import Footer from './Footer.jsx';
+
 
 function Posts() {
   const [posts, setPosts] = useState([]);
@@ -10,7 +11,6 @@ function Posts() {
 
   useEffect(() => {
     const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
-
     const fetchPosts = async () => {
       try {
         const response = await fetch(apiUrl);
@@ -20,7 +20,6 @@ function Posts() {
         console.error('Error :-', error);
       }
     };
-
     fetchPosts();
   }, []);
 
@@ -34,11 +33,19 @@ function Posts() {
       
       <div className="board">
         <h1>My Fake Json Posts</h1>
-        <div className="posts-container">
+
+        {/* --- 2. MAKE CHANGES HERE --- */}
+        <Grid container spacing={3}>
           {currentPosts.map(post => (
-            <Post key={post.id} post={post} />
+            <Grid item key={post.id} xs={12}>
+              <div className="post">
+                <h3>{post.title}</h3>
+                <p>{post.body}</p>
+              </div>
+            </Grid>
           ))}
-        </div>
+        </Grid>
+        {/* --- END OF CHANGES --- */}
         
         <div className="pagination">
           <button

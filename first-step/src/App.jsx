@@ -5,7 +5,7 @@ import About from './components/About.jsx';
 import Services from './components/Services.jsx';
 import Contact from './components/Contact.jsx';
 import Learned from './components/Learned.jsx';
-import Posts from './pages/Posts.jsx';
+import Posts from './components/Posts.jsx';
 import Clock from './components/ForTest.jsx'; 
 
 function App() {
