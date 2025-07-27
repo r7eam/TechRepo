@@ -8,6 +8,7 @@ import Learned from './components/Learned.jsx';
 import Posts from './components/Posts.jsx';
 import Clock from './components/ForTest.jsx'; 
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -18,7 +19,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/learned" element={<Learned />} />
         <Route path="/posts" element={<Posts />} />
-        <Route path="/Clock" element={<Clock />} />
+        <Route path="/clock" element={<Clock />} />
       </Routes>
     </BrowserRouter>
   );
