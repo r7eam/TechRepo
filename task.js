@@ -657,5 +657,30 @@
 // console.log(lowest);
 // console.log("Is Valley :", isValley);
 
+//=======================
+
+// //we have a sorted array return the index of target  
+
+// let num = [1,2, 4, 7], target = 5;
+// for (let i = 0; i < num.length; i++) {
+//     if (num[i] === target) {
+//         console.log(i); 
+//         break; 
+//     }
+//     else if (num[i] > target) {
+//         console.log(i);
+//         break;
+//     }
+// }
 
 
+//every zero put it in the last in same array use push dont use another array
+
+// let arr = [2, 0, 4, 7, 0, 3];
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] === 0) {
+    
+//         arr.push(0);
+//     }
+// }
+// console.log(arr);

@@ -3,7 +3,6 @@ import { Grid, Card, CardContent, Typography, Pagination, Box } from '@mui/mater
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 
-
 function Posts() {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
