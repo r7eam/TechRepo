@@ -1,16 +1,5 @@
 
 /* =================== Header and Footer Components =================== */
-@media (max-width: 600px) {
-  .nav-bar {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .nav-bar button, .nav-bar a {
-    width: 100%;
-    margin: 5px 0;
-  }
-} 
-
 .header {
   background: #727272;
   text-align: center;
