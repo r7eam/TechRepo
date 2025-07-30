@@ -90,6 +90,11 @@ function Posts() {
                   <Typography variant="body2" color="#fafafa">
                     {post.body}
                   </Typography>
+                  <br />
+                  <Typography variant="body2" color="#740808ff">
+                    Post ID: {post.id}
+                  
+                  </Typography>
                 </CardContent>
               </Card>
             </Grid>
