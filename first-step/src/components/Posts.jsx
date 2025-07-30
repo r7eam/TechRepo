@@ -144,7 +144,7 @@ function Posts() {
   };
 
   return (
-    <Box className="posts-body" sx={{ minHeight: '100vh', bgcolor: '#cdc3c3ff' }}>
+    <Box className="posts-body" sx={{ minHeight: '100vh', bgcolor: '#ffffffff' }}>
       <Header />
       <Box className="board" sx={{ maxWidth: 800, mx: 'auto', my: 4, p: 2 }}>
         <Typography variant="h4" align="center" color="#1976d2" fontWeight={700} gutterBottom>
