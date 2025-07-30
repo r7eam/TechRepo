@@ -3,7 +3,7 @@ import Footer from './Footer.jsx';
 
 function About() { 
   return (
-    <div className="about-body"> 
+    <card className="about-body"> 
       <Header />
 
       <div className="content">
@@ -12,7 +12,7 @@ function About() {
       </div>
 
       <Footer />
-    </div>
+    </card>
   );
 }
 

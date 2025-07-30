@@ -1,13 +1,8 @@
 import { useState } from 'react';
-import {  AppBar, Toolbar, Box, Button, IconButton, Drawer, List, 
-  ListItemButton, 
-  ListItemIcon, 
-  ListItemText,
-  useTheme 
+import {  AppBar, Toolbar, Box, Button, IconButton, Drawer, List, ListItemButton, ListItemIcon, ListItemText,useTheme 
 } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Link } from 'react-router-dom';
-
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import MiscellaneousServicesIcon from '@mui/icons-material/MiscellaneousServices';
@@ -24,8 +19,8 @@ function Header() {
   return (
     <>
       <AppBar 
-        position='static' 
-        sx={{ backgroundColor: '#898989ff' }}
+        position="static"
+        sx={{ backgroundColor: '#aac0d5ff' }}
       >
         <Toolbar>
           <Box sx={{ flexGrow: 1 }}> 
@@ -37,7 +32,6 @@ function Header() {
               />
             </Link>
           </Box>
-
           {isMobile ? (
             <IconButton
               onClick={() => setDrawerOpen(true)}
@@ -64,7 +58,7 @@ function Header() {
         onClose={() => setDrawerOpen(false)}
       >
         <Box
-          sx={{ width: 250, backgroundColor: '#b0adadff', height: '100%' }}
+          sx={{ width: 250, backgroundColor: '#b1b4b5ff', height: '100%' }}
           role="presentation"
           onClick={() => setDrawerOpen(false)}
         >
@@ -81,5 +75,4 @@ function Header() {
     </>
   );
 }
-
 export default Header;

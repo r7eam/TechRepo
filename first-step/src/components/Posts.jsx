@@ -1,15 +1,19 @@
 import { useState, useEffect } from 'react';
 import { Grid, Card, CardContent, Typography, Pagination, Box, Button, ButtonGroup } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 
 function Posts() {
+
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('posts');
   const [posts, setPosts] = useState([]);
   const [todos, setTodos] = useState([]);
   const [users, setUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
+  
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -47,11 +51,9 @@ function Posts() {
     fetchUsers();
   }, []);
 
-  // Calculate pagination for current active tab
   const getLastItem = () => currentPage * itemsPerPage;
   const getFirstItem = () => getLastItem() - itemsPerPage;
   
-  // Get current items based on active tab
   const getCurrentItems = () => {
     if (activeTab === 'posts') {
       return posts.slice(getFirstItem(), getLastItem());
@@ -62,7 +64,6 @@ function Posts() {
     }
   };
   
-  // Calculate total pages based on active tab
   const getTotalPages = () => {
     if (activeTab === 'posts') {
       return Math.ceil(posts.length / itemsPerPage);
@@ -73,7 +74,6 @@ function Posts() {
     }
   };
 
-  // Render different content based on active tab
   const renderContent = () => {
     const currentItems = getCurrentItems();
     
@@ -91,10 +91,12 @@ function Posts() {
                     {post.body}
                   </Typography>
                   <br />
-                  <Typography variant="body2" color="#740808ff">
+                  <Typography variant="body1" color="#f06a6aff">
                     Post ID: {post.id}
-                  
                   </Typography>
+                  <Button variant="contained" onClick={() => navigate(`/posts/${post.id}`)}>
+                    View
+                  </Button>
                 </CardContent>
               </Card>
             </Grid>
@@ -157,18 +159,18 @@ function Posts() {
         </Typography>
         
         {/* Tab navigation */}
-        <Box sx={{ display: 'flex', justifyContent: 'center', mb: 4 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'center', mb: 3 }}>
           <ButtonGroup 
             variant="contained" 
             aria-label="API data navigation"
             sx={{ 
               backgroundColor: '#222',
-              borderRadius: 2,
+              borderRadius: 22,
               overflow: 'hidden',
               '& .MuiButton-root': {
-                border: 'none',
-                borderRadius: 0,
-                px: 4
+              border: 'none',
+              borderRadius: 0,
+              px: 4
               }
             }}
           >

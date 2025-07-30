@@ -90,17 +90,17 @@
   text-align: center;
 }
 .card {
-  background: #9a9898;
+  background: #768db2;
   margin: 10px auto;
   width: 60%;
   border-radius: 10px;
-  box-shadow: 0 0 10px #999;
+  box-shadow: 0 0 10px #000000;
   padding: 20px;
   max-width: 500px;
   transition: box-shadow 0.2s, transform 0.2s;
 }
 .card:hover {
-  box-shadow: 0 4px 16px #0078d799;
+  box-shadow: 0 4px 16px #000000;
   transform: translateY(-2px) scale(1.02);
 }
 
@@ -153,7 +153,7 @@ nav button:last-child {
   padding: 40px 20px;
 }
 .service-card {
-  background: #b4b0b0;
+  background: #768db2;
   padding: 20px;
   margin: 10px auto;
   width: 60%;
@@ -187,10 +187,10 @@ nav button:last-child {
 }
 .contact form {
   display: inline-block;
-  background: #b7b5b5;
+  background: #768db2;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 2px 8px rgb(0, 0, 0);
 }
 input,
 textarea {
@@ -207,12 +207,12 @@ textarea {
   margin: 0;
 }
 .learned-body .week-section {
-  background: #949292;
+  background: #768db2;
   margin: 20px auto;
   padding: 30px;
   border-radius: 200px;
   max-width: 550px;
-  box-shadow: 0 2px 8px #0001;
+  box-shadow: 0 2px 8px rgb(0, 0, 0);
   min-height: 10vh;
   display: flex;
   flex-direction: column;
