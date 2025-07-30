@@ -659,9 +659,27 @@
 
 //=======================
 
-// //we have a sorted array return the index of target  
+// Binary search in a sorted array (easier version, using for loop)
+// let num = [1, 2, 4, 5, 7], target = 5;
+// let index = -1;
 
-// let num = [1,2, 4, 7], target = 5;
+// for (let left = 0, right = num.length - 1; left <= right;) {
+//     let mid = Math.floor((left + right) / 2);
+//     if (num[mid] === target) {
+//         index = mid;
+//         break;
+//     }
+//     if (num[mid] < target) {
+//         left = mid + 1;
+//     } else {
+//         right = mid - 1;
+//     }
+// }
+
+// console.log(index); 
+//====================
+
+// let num = [1,2, 5,4, 7], target = 5;
 // for (let i = 0; i < num.length; i++) {
 //     if (num[i] === target) {
 //         console.log(i); 
@@ -674,13 +692,107 @@
 // }
 
 
-//every zero put it in the last in same array use push dont use another array
+// //every zero put it in the last in same array use push dont use another array solve it using binary search
 
-// let arr = [2, 0, 4, 7, 0, 3];
+// let arr = [0, 1, 0, 3, 5];
+// let j = 0;
+
 // for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] === 0) {
-    
-//         arr.push(0);
+//   if (arr[i] !== 0) {
+
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//     j++;
+//   }
+// }
+
+// console.log(arr)
+//==================
+
+// //function compaire string between two 
+
+// let s="tnagram", t="nagaram";
+
+// function check(){
+//   if(s.length !== t.length) return false;
+
+//   let a = {};
+
+//   for(let i of s) {
+//     a[i] = (a[i] || 0) +1
+//   }
+//   for(let j of t){
+//     if(!a[j]) return false 
+//     a[j]--;
+//   }
+//   return true;
+// }
+// console.log(check())
+
+//================================
+
+// // return the index of target 
+// function suma(num,target){
+// for (let i = 0; i < num.length; i++) {
+//     for (let j = i + 1; j < num.length; j++) {
+//         if (num[i] + num[j] === target) {
+//             return [i,j]
+//         }
+//     }
+//   }}
+// console.log(suma([2,7,6,8],9))
+
+//=======================
+// // Intersection of Two Arrays
+// let nums1 = [1, 2, 5, 3];
+// let nums2 = [0, 2, 3, 6];
+// let arr=[]
+// for(let i=0;i<nums1.length;i++){
+//     for(let j=0 ;j<=nums2.length;j++){
+//         if(nums1[i]===nums2[j]){
+//             arr.push(nums1[i])
+//             break;
+//         }
 //     }
 // }
-// console.log(arr);
+// console.log(arr)
+
+
+//====================
+
+// //expected output:[[-1, -1, 2], [-1, 0, 1]]
+// nums = [-1, 0, 1, 2, -1, -4]
+// function resultt(array){
+//     let output=[]
+//     for(let i=0;i<array.length-2;i++){
+//         for(let j=i+1;j<array.length-1;j++){
+//             for(let v=j+1;v<array.length;v++)
+//                 if(array[i]+array[j]+array[v]==0){
+//                     output.push([array[i],array[j],array[v]])
+//                 }
+//             }
+//         }
+//     return output;
+// }
+// console.log(resultt(nums))
+
+//=====================
+// let arr=[1,2,3,4,5,6]
+// function sumArr(arr){
+//     let sum=0
+//     for(let i=0;i<arr.length;i++){
+//         sum+=arr[i]
+//     }
+//    console.log(sum) 
+// }
+// sumArr(arr)
+
+//--
+// //sumation of array
+
+// let arr=[1,2,3,4,5,6]
+// let b = arr.reduce((a,b)=> a+b ,0)
+// console.log(b)
+
+//====================
