@@ -796,3 +796,179 @@
 // console.log(b)
 
 //====================
+// //find the index for first appear for the string if doesn't there return -1
+
+// let string = "sadbutsad", find = "sad";
+// let index = -1;
+// for (let i = 0; i <= string.length - find.length; i++) {
+//     for (let j = 0; j < find.length; j++) {
+//         if (string[i+j] !== find[j]) {
+            
+//             console.log(string[i])
+//         }
+//     }
+// }
+// console.log(index)
+
+
+// //========================
+// //i want you calculate the a and b by code 
+// let arr1 = [1, 2, 3, 0, 0, 0], arr2 = [2, 5, 6,4];
+// function arr(arr1, arr2) {
+//     let a = arr1.length - arr2.length; 
+//     let b = arr2.length;
+//     for (let i = 0; i < b; i++) {
+//         arr1[a + i] = arr2[i];
+//     }
+//     arr1.sort((a, b) => a - b);
+//     return arr1;
+// }
+// console.log(arr(arr1, arr2));
+
+//==================
+
+
+
+///////////////////////////////////
+// // pascal traingle array 
+
+//  function pascal(numRows) {
+//     let arr=[]
+//     for(let i=0;i<numRows;i++){
+//         const row=[1]
+//         for(let j=1;j<i;j++){
+    //             row[j] = arr[i - 1][j - 1] + arr[i - 1][j]
+    //         }
+    //         if(i>0) {row.push(1)}
+    //         arr.push(row)
+    //     }
+    //     return arr
+    // };
+    // console.log(pascal())
+    
+    //=====================
+    
+// // //index of pascal array 
+// var generate = function(n) {
+//     let row = [1];
+
+//     for (let i = 1; i <= n; i++) {
+//         let newRow = [1];
+
+//         for (let j = 1; j < row.length; j++) {
+//             newRow[j] = row[j - 1] + row[j];
+//         }
+
+//         newRow.push(1);
+//         row = newRow;
+//     }
+
+//     return row;
+// };
+// console.log(generate(3));
+
+
+
+// //convert zero to end 
+// function arr1(arr) {
+//     let j = 0;
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] !== 0) {
+//             if (i !== j) {
+//                 arr[j] = arr[i];
+//                 arr[i] = 0
+//             }
+//             j++;
+//         }
+//     }
+//     return arr;
+// }
+// console.log(arr1([0, 1, 0, 3, 4, 2]));
+
+//================================
+
+// //make it fancy 
+// function fancy(s) {
+//     let result = "";
+
+//     for (let i = 0; i < s.length; i++) {
+//         let last = result[result.length - 1];
+//         let secondLast = result[result.length - 2];
+
+//         if (s[i] === last && s[i] === secondLast) {
+//             continue;
+//         }
+
+//         result += s[i]; 
+//     }
+
+//     return result;
+// };
+// console.log(fancy('leeetcode'))
+
+// //anotherr solution morrre optimal 
+// var makeFancyString = function(s) {
+//     let result = [];
+
+//     for (let i = 0; i < s.length; i++) {
+//         let len =result.length
+
+//         if (len >= 2 && s[i] === result[len-1] && s[i] === result[len-2]) {
+//             continue;
+//         }
+//         result.push(s[i])
+//     }
+
+//     return result.join('');
+// };
+// console.log(makeFancyString('leeetcode'))
+
+//============================
+// //index counterr 
+// function createCounter(n) {
+//     let a=n
+//     return function() {
+//         return a++;
+//     }
+// }
+// const counter = createCounter(-2);
+// let calls = ["call", "call", "call", "call", "call"];
+// let result =[]
+// for (let i = 0; i < calls.length; i++) {
+//     result.push(counter());
+// }
+// console.log(result);
+
+
+// //same char 
+// let strs =["fly","flower", "flow"]
+// var longestCommonPrefix = function(strs) {
+//     if(strs.length === 0) return "";
+
+//     let result=""
+//     for(let i=0;i<strs[0].length;i++){
+//         let firstWord = strs[0][i]
+
+//         for(let j=1;j<strs.length ;j++){
+//             if(i >= strs[j].length || strs[j][i] !== firstWord){
+//                 return result;
+//             }
+//         }
+//         result+=firstWord
+//     }
+//     return result 
+// };
+// console.log(longestCommonPrefix(strs))
+//================================================
+
+// //check if its plindrom or not 
+// var isPalindrome = function(x) {
+//     if (x < 0) return false;
+//     let str = x.toString();
+//     let reversedStr = str.split('').reverse().join('');
+//     return str === reversedStr;
+// };
+
+// console.log(isPalindrome(121)); 
+
